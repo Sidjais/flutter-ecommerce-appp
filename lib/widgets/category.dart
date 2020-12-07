@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import './category_card.dart';
 
@@ -12,59 +13,57 @@ class Category extends StatelessWidget {
         children: <Widget>[
           CategoryCard(
               Icon(
-                Icons.book,
+                MdiIcons.chiliMedium,
+                color: Colors.red,
                 size: 40,
-
               ),
-              'Book',
-                  (){
-                print("hello");
-              }),
+              'Spices', () {
+            print("hello");
+          }),
           CategoryCard(
               Icon(
-                Icons.computer,
+                MdiIcons.gold,
+                color: Colors.amber,
                 size: 40,
               ),
-              'Laptops',
-                  (){
-                print("hello");
-              }),
+              'Jewels', () {
+            print("hello");
+          }),
           CategoryCard(
               Icon(
-                Icons.videogame_asset,
+                Icons.home_work_outlined,
+                color: Colors.pink,
                 size: 40,
               ),
-              'Games',
-                  (){
-                print("hello");
-              }),
+              'Decor', () {
+            print("hello");
+          }),
           CategoryCard(
               Icon(
-                Icons.videocam,
+                MdiIcons.tshirtV,
+                color: Colors.orange,
                 size: 40,
               ),
-              'Movies',
-                  (){
-                print("hello");
-              }),
+              'Clothes', () {
+            print("hello");
+          }),
           CategoryCard(
               Icon(
-                Icons.watch,
+                MdiIcons.artstation,
+                color: Colors.blue,
                 size: 40,
               ),
-              'Watches',
-                  (){
-                print("hello");
-              }),
+              'Art', () {
+            print("hello");
+          }),
           CategoryCard(
               Icon(
-                Icons.weekend,
+                Icons.wallet_travel_rounded,
                 size: 40,
               ),
-              'Furniture',
-                  (){
-                print("hello");
-              }),
+              'Others', () {
+            print("hello");
+          }),
         ],
       ),
     );
