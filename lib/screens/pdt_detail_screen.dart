@@ -22,7 +22,7 @@ class DetailPage extends StatelessWidget {
             width: double.infinity,
             child: Padding(
               padding: const EdgeInsets.all(10),
-              child: Image.network(loadedPdt.imgUrl),
+              child: Hero(tag: loadedPdt.id,child: Image.network(loadedPdt.imgUrl)),
             ),
           ),
           Text(
