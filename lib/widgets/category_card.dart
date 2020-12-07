@@ -22,7 +22,7 @@ class CategoryCard extends StatelessWidget {
               )
             ],
           ),
-          width: MediaQuery.of(context).size.width/3,
+          width: MediaQuery.of(context).size.width/4,
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Column(

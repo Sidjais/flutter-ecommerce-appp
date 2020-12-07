@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           title: Text('Flutter E-com'),
           actions: <Widget>[
-            IconButton(icon: Badge(badgeContent:Text(count.toString()),child: Icon(Icons.add_shopping_cart, size: 30,)), onPressed: ()=>Navigator.of(context).pushNamed(CartScreen.routeName))
+            IconButton(icon: Badge(badgeContent:Text(count.toString()),child: Icon(Icons.shopping_cart, size: 30,)), onPressed: ()=>Navigator.of(context).pushNamed(CartScreen.routeName))
           ],
         ),
         body: HomeBody()
