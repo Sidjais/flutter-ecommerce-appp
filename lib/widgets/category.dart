@@ -31,7 +31,7 @@ class Category extends StatelessWidget {
           }),
           CategoryCard(
               Icon(
-                Icons.home_work_outlined,
+                Icons.home,//home_work_outlined,
                 color: Colors.pink,
                 size: 40,
               ),
@@ -58,7 +58,7 @@ class Category extends StatelessWidget {
           }),
           CategoryCard(
               Icon(
-                Icons.wallet_travel_rounded,
+                Icons.account_balance_wallet,//wallet_travel_rounded,
                 size: 40,
               ),
               'Others', () {
