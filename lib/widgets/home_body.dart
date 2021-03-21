@@ -24,7 +24,10 @@ class HomeBody extends StatelessWidget {
           'Products',
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         )),
+        if(index==0)
         AllProducts()
+        else
+          Text('nothing to show'),
       ],
     );
   }
