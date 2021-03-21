@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecom/models/spices.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import './category_card.dart';
+
 
 class Category extends StatelessWidget {
   @override
@@ -12,14 +14,17 @@ class Category extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         children: <Widget>[
           CategoryCard(
-              Icon(
-                MdiIcons.chiliMedium,
-                color: Colors.red,
-                size: 40,
-              ),
-              'Spices', () {
-            print("hello");
-          }),
+            Icon(
+              MdiIcons.chiliMedium,
+              color: Colors.red,
+              size: 40,
+            ),
+            'Spices',
+            () {
+              print("hello");
+              }
+
+          ),
           CategoryCard(
               Icon(
                 MdiIcons.gold,
@@ -31,7 +36,7 @@ class Category extends StatelessWidget {
           }),
           CategoryCard(
               Icon(
-                Icons.home,//home_work_outlined,
+                Icons.home, //home_work_outlined,
                 color: Colors.pink,
                 size: 40,
               ),
@@ -58,7 +63,7 @@ class Category extends StatelessWidget {
           }),
           CategoryCard(
               Icon(
-                Icons.account_balance_wallet,//wallet_travel_rounded,
+                Icons.account_balance_wallet, //wallet_travel_rounded,
                 size: 40,
               ),
               'Others', () {

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import '../models/products.dart';
 import 'package:provider/provider.dart';
+
 import '../models/cart.dart';
+import '../models/spices.dart';
 
 class DetailPage extends StatelessWidget {
   static const routeName = '/product-detail';
@@ -22,11 +23,12 @@ class DetailPage extends StatelessWidget {
             width: double.infinity,
             child: Padding(
               padding: const EdgeInsets.all(10),
-              child: Hero(tag: loadedPdt.id,child: Image.network(loadedPdt.imgUrl)),
+              child: Hero(
+                  tag: loadedPdt.id, child: Image.network(loadedPdt.imgUrl)),
             ),
           ),
           Text(
-            'Price: \$${loadedPdt.price}',
+            'Price: \Rs ${loadedPdt.price}',
             style: TextStyle(
               fontSize: 30,
             ),
@@ -45,6 +47,10 @@ class DetailPage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           cart.addItem(productId, loadedPdt.name, loadedPdt.price);
+          Scaffold.of(context).showSnackBar(SnackBar(
+            duration: Duration(seconds: 2),
+            content: Text('Item Added to Cart'),
+          ));
         },
         child: Icon(
           Icons.shopping_cart,

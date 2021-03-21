@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecom/models/orders.dart';
-import 'package:flutter_ecom/models/products.dart';
+import 'package:flutter_ecom/models/spices.dart';
 import 'package:flutter_ecom/screens/pdt_detail_screen.dart';
-import './screens/homepage.dart';
 import 'package:provider/provider.dart';
+
 import './models/cart.dart';
 import './screens/cart_screen.dart';
+import './screens/homepage.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider.value(
           value: Orders(),
-        )
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
