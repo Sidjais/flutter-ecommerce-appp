@@ -3,15 +3,7 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 
 import './category_card.dart';
 
-class Category extends StatefulWidget {
-
-  @override
-  _CategoryState createState() => _CategoryState();
-}
-
-class _CategoryState extends State<Category> {
-  int index=0;
-
+class Category extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -26,7 +18,6 @@ class _CategoryState extends State<Category> {
                 size: 40,
               ),
               'Spices', () {
-                index=0;
             print("hello");
           }),
           CategoryCard(
@@ -37,7 +28,6 @@ class _CategoryState extends State<Category> {
               ),
               'Jewels', () {
             print("hello");
-            index=1;
           }),
           CategoryCard(
               Icon(
@@ -47,7 +37,6 @@ class _CategoryState extends State<Category> {
               ),
               'Decor', () {
             print("hello");
-            index=2;
           }),
           CategoryCard(
               Icon(
@@ -57,7 +46,6 @@ class _CategoryState extends State<Category> {
               ),
               'Clothes', () {
             print("hello");
-            index=3;
           }),
           CategoryCard(
               Icon(
@@ -67,7 +55,6 @@ class _CategoryState extends State<Category> {
               ),
               'Art', () {
             print("hello");
-            index=4;
           }),
           CategoryCard(
               Icon(
@@ -76,7 +63,6 @@ class _CategoryState extends State<Category> {
               ),
               'Others', () {
             print("hello");
-            index=5;
           }),
         ],
       ),
