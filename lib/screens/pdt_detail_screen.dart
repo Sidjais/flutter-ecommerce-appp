@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../models/cart.dart';
 import '../models/spices.dart';
+import '../models/jewels.dart';
 
 class DetailPage extends StatelessWidget {
   static const routeName = '/product-detail';
@@ -11,6 +12,7 @@ class DetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final productId = ModalRoute.of(context).settings.arguments as String;
     final loadedPdt = Provider.of<Products>(context).findById(productId);
+   // final productData1 = Provider.of<Products1>(context);
     final cart = Provider.of<Cart>(context);
     return Scaffold(
       appBar: AppBar(
