@@ -523,6 +523,7 @@ class _HomeBodyState extends State<HomeBody> {
                 imageUrl: _items[i].imgUrl,
                 id: _items[i].id,
                 price: _items[i].price,
+                description: _items[i].description,
               )),
         )
       ],

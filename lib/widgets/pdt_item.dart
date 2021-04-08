@@ -12,8 +12,9 @@ class PdtItem extends StatelessWidget {
   final String imageUrl;
   final String id;
   final double price;
+  final String description;
 
-  PdtItem({this.name, this.imageUrl,this.id,this.price});
+  PdtItem({this.name, this.imageUrl,this.id,this.price,this.description});
   @override
   Widget build(BuildContext context) {
     final pdt = Provider.of<Product>(context);
@@ -22,7 +23,7 @@ class PdtItem extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.of(context)
-            .pushNamed(DetailPage.routeName, arguments: id);
+            .pushNamed(DetailPage.routeName, arguments: {"id":id,"name":name,"url":imageUrl,"price":price,"description":description});
       },
       child: Padding(
         padding: const EdgeInsets.all(10.0),

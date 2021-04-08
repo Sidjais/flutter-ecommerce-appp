@@ -10,13 +10,13 @@ class DetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final productId = ModalRoute.of(context).settings.arguments as String;
-    final loadedPdt = Provider.of<Products>(context).findById(productId);
+    final item = ModalRoute.of(context).settings.arguments as Map;
+    //final loadedPdt = Provider.of<Products>(context).findById(productId);
    // final productData1 = Provider.of<Products1>(context);
     final cart = Provider.of<Cart>(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text(loadedPdt.name),
+        title: Text(item["name"]),
       ),
       body: Column(
         children: <Widget>[
@@ -26,11 +26,11 @@ class DetailPage extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(10),
               child: Hero(
-                  tag: loadedPdt.id, child: Image.network(loadedPdt.imgUrl)),
+                  tag: item['id'], child: Image.network(item["url"])),
             ),
           ),
           Text(
-            'Price: \Rs ${loadedPdt.price}',
+            'Price: \Rs ${item['price']}',
             style: TextStyle(
               fontSize: 30,
             ),
@@ -38,7 +38,7 @@ class DetailPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: Text(
-              '${loadedPdt.description}',
+              '${item['description']}',
               style: TextStyle(
                 fontSize: 20,
               ),
@@ -48,7 +48,7 @@ class DetailPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          cart.addItem(productId, loadedPdt.name, loadedPdt.price);
+          cart.addItem(item['id'], item['name'], item['price']);
           Scaffold.of(context).showSnackBar(SnackBar(
             duration: Duration(seconds: 2),
             content: Text('Item Added to Cart'),
